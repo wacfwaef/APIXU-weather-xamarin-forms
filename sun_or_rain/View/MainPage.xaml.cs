@@ -18,9 +18,9 @@ namespace sun_or_rain
         {
             ListView citieslist = new ListView
             {
-                source = Favourite.FavCity
+                source = Favourite.FavCity;
             };
-
+            
             InitializeComponent();
         }
     }

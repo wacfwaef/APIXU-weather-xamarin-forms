@@ -67,5 +67,12 @@ namespace sun_or_rain.Model
             
 
         }
+        public class APIXUCurrentWeather
+        {
+            [JsonProperty("location")]
+            public Location Location { get; set; }
+            [JsonProperty("current")]
+            public Current Current { get; set; }
+        }
     }
 }

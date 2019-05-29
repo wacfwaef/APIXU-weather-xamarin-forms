@@ -4,9 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="sun_or_rain.MainPage"
-             xmlns:weatherVm="clr-namespace:sun_or_rain.ViewModel"
-             x:Title="My Favourite Cities">
+             x:Class="sun_or_rain.MainPage">
     <ListView x.Name="citieslist"
               BackgroundColor="#ffffff"
               SeperatorVisibility="true"

@@ -9,7 +9,7 @@ namespace sun_or_rain.Model
 
         public class FavCity
         {
-            List<string> favouritecities { get; set; }
+            List<string> Favouritecities { get; set; }
         }
     }
 }

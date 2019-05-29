@@ -4,12 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="sun_or_rain.View.View1">
+             x:Class="sun_or_rain.View.View_Weather">
   <ContentView.Content>
       <StackLayout>
             <StackLayout>
                 <ContentPage.BindingContext>
-                    <weatherVm::VM/>
+                    
                 </ContentPage.BindingContext>
                 <StackLayout Padding="20,40,20,20">
                     <Entry Text="{Binding City, Mode=TwoWay}"
