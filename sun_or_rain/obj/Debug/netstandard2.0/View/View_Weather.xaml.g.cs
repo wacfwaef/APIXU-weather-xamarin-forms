@@ -14,7 +14,7 @@ namespace sun_or_rain.View {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\View_Weather.xaml")]
-    public partial class View_Weather : global::Xamarin.Forms.ContentView {
+    public partial class View_Weather : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {

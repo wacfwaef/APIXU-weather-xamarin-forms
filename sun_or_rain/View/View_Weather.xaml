@@ -1,28 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="sun_or_rain.View.View_Weather">
-  <ContentView.Content>
+             x:Class="sun_or_rain.View.View_Weather"
+             Title="{Binding MainModel.Location.Name}">
+    
       <StackLayout>
             <StackLayout>
-                <ContentPage.BindingContext>
-                    
-                </ContentPage.BindingContext>
                 <StackLayout Padding="20,40,20,20">
-                    <Entry Text="{Binding City, Mode=TwoWay}"
-           Placeholder="Search City"/>
+                    <Entry Text="{Binding MainModel.Location.Name}"
+           Placeholder="{Binding MainModel.Location.Name}" IsReadOnly="True" />
                     <ActivityIndicator IsRunning="{Binding IsBusy,Mode=TwoWay}"/>
-                    <StackLayout Orientation="Horizontal">
-                        <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label Text="City:"/>
-                        </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand">
-                            <Label Text="{Binding MainModel.Location.Name}"/>
-                        </StackLayout>
-                    </StackLayout>
+                    
 
                     <StackLayout Orientation="Horizontal">
                         <StackLayout HorizontalOptions="StartAndExpand">
@@ -88,9 +76,10 @@
                             <Label Text="{Binding MainModel.Current.WindKph}"/>
                         </StackLayout>
                     </StackLayout>
+                    <Button Text="Go Back" Clicked="NavigateBack" />
                 </StackLayout>
             </StackLayout>
 
         </StackLayout>
-  </ContentView.Content>
-</ContentView>
+  
+</ContentPage>

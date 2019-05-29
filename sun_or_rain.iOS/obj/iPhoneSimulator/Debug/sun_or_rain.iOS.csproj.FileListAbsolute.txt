@@ -65,3 +65,9 @@ C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain.iOS\obj\iPhoneSimulator\Debug\
 C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain.iOS\obj\iPhoneSimulator\Debug\sun_or_rain.iOS.exe
 C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain.iOS\obj\iPhoneSimulator\Debug\sun_or_rain.iOS.pdb
 C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain.iOS\bin\iPhoneSimulator\Debug\sun_or_rain.dll.mdb
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain.iOS\bin\iPhoneSimulator\Debug\SQLite-net.dll
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.core.dll
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.provider.sqlite3.dll
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain.iOS\bin\iPhoneSimulator\Debug\System.Data.SQLite.dll

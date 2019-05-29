@@ -32,19 +32,6 @@ namespace sun_or_rain.Apixu
             return JsonConvert.DeserializeObject<APIXUCurrentWeather>(apixu.Execute(request).Content);
         }
 
-        public async Task<APIXUCurrentWeather> GetCurrentWeatherAsync(string city)
-        {
-            var apixu = new RestClient(API);
-            var request = new RestRequest
-            {
-                Resource = current + key + "&q=" + city,
-                Method = Method.GET
-            };
-
-            var restResponse = await apixu.ExecuteTaskAsync(request);
-            return JsonConvert.DeserializeObject<APIXUCurrentWeather>(restResponse.Content);
-        }
-
         
     }    
 

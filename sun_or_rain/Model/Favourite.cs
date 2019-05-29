@@ -4,13 +4,9 @@ using System.Text;
 
 namespace sun_or_rain.Model
 {
-    class Favourite
+    public class Favourite
     {
-
-        public class FavCity
-        {
-            List<string> Favouritecities { get; set; }
-        }
+        public string Cityname { get; set; }
     }
 }
     

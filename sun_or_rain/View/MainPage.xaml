@@ -3,27 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:sun_or_rain.ViewModel"
              mc:Ignorable="d"
-             x:Class="sun_or_rain.MainPage">
-    <ListView x.Name="citieslist"
+             x:Class="sun_or_rain.MainPage"
+             Title="My favourite weather app!">
+    <StackLayout>
+        <Entry Text="Insert a city here" />
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="View weather" Command="{Binding onNewCity}"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="Add to favourites" Command="{Binding OnItemAdded}"></Button>
+            </StackLayout>
+        </StackLayout>
+        
+
+        <ListView 
+                  HasUnevenRows="True"
               BackgroundColor="#ffffff"
-              SeperatorVisibility="true"
               VerticalOptions="FillAndExpand"
-              HorizontalOptions="FillAndExpand">
+              HorizontalOptions="FillAndExpand"
+                  ItemSelected="onItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal"
-                                 BackgroundColor="White">
+                                 BackgroundColor="White"
+                                 HorizontalOptions="FillAndExpand">
                         <Label Text="{Binding favouritecities}" 
                        d:Text="{Binding .}"
                        Style="{DynamicResource ListItemTextStyle}" />
-                        <Label Text="{Binding Detail}" 
-                       d:Text="Detail"
-                       Style="{DynamicResource ListItemDetailTextStyle}"/>
-                    </StackLayout>
+                            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                                <Button Text="Remove from favourites" Command="{Binding onRemove}"></Button>
+                            </StackLayout>
+                        </StackLayout>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                <Button Text="Save" Command="{Binding onSave}"></Button>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

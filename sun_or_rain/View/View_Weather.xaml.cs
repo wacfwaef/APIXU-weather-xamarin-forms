@@ -10,11 +10,15 @@ using Xamarin.Forms.Xaml;
 namespace sun_or_rain.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class View1 : ContentView
+    public partial class View_Weather : ContentPage
     {
-        public View1()
+        public View_Weather()
         {
             InitializeComponent();
+        }
+        async void NavigateBack(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }
