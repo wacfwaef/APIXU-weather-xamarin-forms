@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="sun_or_rain.MainPage"
+             xmlns:weatherVm="clr-namespace:sun_or_rain.ViewModel"
+             x:Title="My Favourite Cities">
+    <ListView x.Name="citieslist"
+              BackgroundColor="#ffffff"
+              SeperatorVisibility="true"
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal"
+                                 BackgroundColor="White">
+                        <Label Text="{Binding favouritecities}" 
+                       d:Text="{Binding .}"
+                       Style="{DynamicResource ListItemTextStyle}" />
+                        <Label Text="{Binding Detail}" 
+                       d:Text="Detail"
+                       Style="{DynamicResource ListItemDetailTextStyle}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

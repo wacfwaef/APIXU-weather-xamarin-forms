@@ -1,0 +1,16 @@
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\bin\Debug\netstandard2.0\sun_or_rain.deps.json
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\bin\Debug\netstandard2.0\sun_or_rain.dll
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\sun_or_rain.csprojAssemblyReference.cache
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\View\MainPage.xaml.g.cs
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\sun_or_rain.csproj.CoreCompileInputs.cache
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\sun_or_rain.AssemblyInfoInputs.cache
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\sun_or_rain.AssemblyInfo.cs
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\bin\Debug\netstandard2.0\sun_or_rain.dll.config
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\sun_or_rain.csproj.App.config
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\bin\Debug\netstandard2.0\ref\sun_or_rain.dll
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\bin\Debug\netstandard2.0\sun_or_rain.pdb
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\sun_or_rain.dll
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\ref\sun_or_rain.dll
+C:\Users\wrt\source\repos\sun_or_rain\sun_or_rain\obj\Debug\netstandard2.0\sun_or_rain.pdb
