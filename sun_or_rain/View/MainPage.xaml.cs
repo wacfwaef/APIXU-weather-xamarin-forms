@@ -37,24 +37,6 @@ namespace sun_or_rain
             //if(ListView.)
         }
 
-
-
-        async void ViewNewCity()
-        {
-            Entry entry = new Entry();
-            if (entry.Text != null)
-            {
-                await Navigation.PushAsync(new View_Weather
-                {
-                    BindingContext = new VMdetails
-                    {
-                        //new page with selected
-                        Chosen = entry.Text
-                    }
-                }) ;
-            }
-
-        }
         async void onItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
@@ -62,13 +44,14 @@ namespace sun_or_rain
                 var item = ((Favourite)e.SelectedItem).Copy();
                 await Navigation.PushAsync(new NavigationPage(new View_Weather
                 {
-                    BindingContext = new VMdetails
+                    BindingContext = new VMdetails(item.Cityname)
                     {
                         //new page with selected
-                        Chosen = item.Cityname
                     }
                 })) ;
             }
         }
+
+        
     }
 }

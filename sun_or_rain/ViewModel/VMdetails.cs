@@ -11,12 +11,12 @@ namespace sun_or_rain.ViewModel
 {
     class VMdetails :VM_base
     {
-        public string Chosen { get; set; }
-        public VMdetails()
+        public VMdetails(string chosen)
         {
-
+            
             Controller.Controller a = new Controller.Controller();
-            a.GetWeather(Chosen);
+            a.GetWeather(chosen);
+            
         }
         
         private MainModel weather_model;

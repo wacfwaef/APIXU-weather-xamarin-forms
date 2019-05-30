@@ -10,6 +10,8 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System.Windows.Input;
 using System.Linq;
+using sun_or_rain.View;
+using sun_or_rain.Controller;
 
 namespace sun_or_rain.ViewModel
 {
@@ -22,7 +24,8 @@ namespace sun_or_rain.ViewModel
         {
             OnItemAdded = new Command(AddFavourite);
             OnRemove = new Command((e) => {RemoveFavourite((e as Favourite));});
-            OnNewCity = new Command(Search);
+            OnNewCity = new Command(ViewNewCity);
+
         }
 
         public ICommand OnItemAdded { get; set; }  
@@ -36,7 +39,7 @@ namespace sun_or_rain.ViewModel
             set { SetProperty(ref item, value); }
             get { return item; }
         }
-
+        //MAIN VIEW
         async void AddFavourite()
         {
             if (Item.Cityname != null && Item.Cityname != "")
@@ -54,7 +57,7 @@ namespace sun_or_rain.ViewModel
                 Item = new Favourite();
             }
         }
-
+        
         async void RemoveFavourite(Favourite item)
         {
             if (item != null && item.ID != 0)
@@ -88,12 +91,27 @@ namespace sun_or_rain.ViewModel
                 return favourites;
             }
         }
+        async void ViewNewCity()
+        {
 
+            if (Item.Cityname != null)
+            {
+                await Nav.PushAsync(new NavigationPage(new View_Weather
+                {
+                    BindingContext = new VMdetails(item.Cityname)
+                    {
+                    }
+                }));
+            }
+
+        }
         private async void Initialize()
         {
             List<Favourite> list = await App.Database.GetItemsAsync();
             FavouritesVar = new ObservableCollection<Favourite>(list);
         }
+
+        //VIEW WEATHER
     }
 }
     

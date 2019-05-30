@@ -15,7 +15,7 @@ namespace sun_or_rain.db
         {
             database = new SQLiteAsyncConnection(dbPath);
             database.CreateTableAsync<Favourite>().Wait();
-            seed();
+            //seed();
         }
 
         private void seed()
