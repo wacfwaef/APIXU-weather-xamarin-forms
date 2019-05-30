@@ -21,7 +21,7 @@ namespace sun_or_rain.ViewModel
         public VM()
         {
             OnItemAdded = new Command(AddFavourite);
-            OnRemove = new Command(RemoveFavourite);
+            OnRemove = new Command((e) => {RemoveFavourite((e as Favourite));});
             OnNewCity = new Command(Search);
         }
 
@@ -55,13 +55,12 @@ namespace sun_or_rain.ViewModel
             }
         }
 
-        async void RemoveFavourite()
+        async void RemoveFavourite(Favourite item)
         {
-            if (Item != null)
+            if (item != null && item.ID != 0)
             {
-                FavouritesVar.Remove(Item);
-                await App.Database.DeleteItemAsync(Item);
-                await Nav.PopAsync();
+                FavouritesVar.Remove(item);
+                await App.Database.DeleteItemAsync(item);
             }
         }
 

@@ -48,7 +48,8 @@
                                 Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
                             </StackLayout>
                             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                                <Button Text="Remove" Command="{Binding OnRemove}" WidthRequest="10"></Button>
+                                <Button Text="Remove" WidthRequest="10" CommandParameter="{Binding .}"
+                                        Command="{Binding Path=BindingContext.OnRemove, Source={x:Reference listView}}" />
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>
