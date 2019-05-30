@@ -5,7 +5,13 @@
              Title="{Binding MainModel.Location.Name}">
     
       <StackLayout>
-            <StackLayout>
+        <StackLayout.Margin>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="0,20,0,0" />
+                <On Platform="Android, UWP" Value="0,0,0,0" />
+            </OnPlatform>
+        </StackLayout.Margin>
+        <StackLayout>
                 <StackLayout Padding="20,40,20,20">
                 <Entry Text="{Binding MainModel.Location.Name}"
            Placeholder="{Binding MainModel.Location.Name}" IsReadOnly="True" />
