@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain.iOS\\sun_or_rain.iOS.csproj": {}
+    "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain.iOS\\sun_or_rain.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain.iOS\\sun_or_rain.iOS.csproj": {
+    "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain.iOS\\sun_or_rain.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain.iOS\\sun_or_rain.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain.iOS\\sun_or_rain.iOS.csproj",
         "projectName": "sun_or_rain.iOS",
-        "projectPath": "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain.iOS\\sun_or_rain.iOS.csproj",
+        "projectPath": "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain.iOS\\sun_or_rain.iOS.csproj",
         "packagesPath": "C:\\Users\\wrt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain.iOS\\obj\\",
+        "outputPath": "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain\\sun_or_rain.csproj": {
-                "projectPath": "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain\\sun_or_rain.csproj"
+              "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain\\sun_or_rain.csproj": {
+                "projectPath": "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain\\sun_or_rain.csproj"
               }
             }
           }
@@ -93,14 +93,14 @@
         }
       }
     },
-    "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain\\sun_or_rain.csproj": {
+    "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain\\sun_or_rain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain\\sun_or_rain.csproj",
+        "projectUniqueName": "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain\\sun_or_rain.csproj",
         "projectName": "sun_or_rain",
-        "projectPath": "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain\\sun_or_rain.csproj",
+        "projectPath": "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain\\sun_or_rain.csproj",
         "packagesPath": "C:\\Users\\wrt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wrt\\source\\repos\\sun_or_rain\\sun_or_rain\\obj\\",
+        "outputPath": "C:\\Users\\wrt\\Documents\\cmov\\xamaringarb\\sun_or_rain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

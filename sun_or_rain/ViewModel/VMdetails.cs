@@ -35,7 +35,7 @@ namespace sun_or_rain.ViewModel
             }
         }
         private Favourite _cities;   // for entry binding and for method parameter value
-        public Favourite cities
+        public Favourite Cities
         {
             get { return _cities; }
             set

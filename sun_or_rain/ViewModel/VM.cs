@@ -20,14 +20,14 @@ namespace sun_or_rain.ViewModel
 
         public VM()
         {
-            onItemAdded = new Command(AddFavourite);
-            onRemove = new Command(RemoveFavourite);
-            onNewCity = new Command(Search);
+            OnItemAdded = new Command(AddFavourite);
+            OnRemove = new Command(RemoveFavourite);
+            OnNewCity = new Command(Search);
         }
 
-        public ICommand onItemAdded { get; set; }  
-        public ICommand onRemove { get; set; }
-        public ICommand onNewCity { get; set; }
+        public ICommand OnItemAdded { get; set; }  
+        public ICommand OnRemove { get; set; }
+        public ICommand OnNewCity { get; set; }
         public INavigation Nav { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -87,7 +87,7 @@ namespace sun_or_rain.ViewModel
         private async void Initialize()
         {
             List<Favourite> list = await MainPage.Database.GetItemsAsync();
-            Favourites = new ObservableCollection<Favourite>(list);
+            FavouritesVar = new ObservableCollection<Favourite>(list);
         }
 
         protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)

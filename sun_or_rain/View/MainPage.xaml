@@ -11,7 +11,7 @@
         <Entry Placeholder="Insert a city here" Text=""/>
         <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="View weather" Command="{Binding onNewCity}"></Button>
+                <Button Text="View weather" Command="{Binding OnNewCity}"></Button>
             </StackLayout>
             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
                 <Button Text="Add to favourites" Command="{Binding OnItemAdded}"></Button>
@@ -25,7 +25,7 @@
               VerticalOptions="FillAndExpand"
               HorizontalOptions="FillAndExpand"
               ItemSelected="onItemSelected"
-              ItemsSource="{Binding Favourites}"
+              ItemsSource="{Binding FavouritesVar}"
               Margin="20" 
               x:Name="listView" >
             
@@ -37,7 +37,7 @@
                                  HorizontalOptions="FillAndExpand">
                             <Label Text="{Binding Cityname}" d:Text="{Binding .}"
                                 Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                            <Button Text="X" Command="{Binding onRemove}" WidthRequest="30"></Button>
+                            <Button Text="X" Command="{Binding OnRemove}" WidthRequest="30"></Button>
                             
                         </StackLayout>
                 </ViewCell>

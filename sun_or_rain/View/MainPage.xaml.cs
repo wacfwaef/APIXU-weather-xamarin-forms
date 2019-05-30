@@ -45,33 +45,42 @@ namespace sun_or_rain
         {
             base.OnAppearing();
         }
-        public void ViewNewCity()
-        {
-            Entry entry = new Entry();
-            if (entry.Text != null)
-            {
-                //new page with input
-            }
-
-        }
+        
 
         protected override void OnDisappearing()
         {
             //if(ListView.)
         }
 
-        
-        
-        
-        async void onItemSelected(object sender, SelectedItemChangedEventArgs e)
+
+
+        async void ViewNewCity()
         {
-            if (e.SelectedItem != null)
+            Entry entry = new Entry();
+            if (entry.Text != null)
             {
                 await Navigation.PushAsync(new View_Weather
                 {
                     BindingContext = new VMdetails
                     {
                         //new page with selected
+                        chosen = entry.Text
+                    }
+                }) ;
+            }
+
+        }
+        async void onItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+            {
+                var item = ((Favourite)e.SelectedItem).Copy();
+                await Navigation.PushAsync(new View_Weather
+                {
+                    BindingContext = new VMdetails
+                    {
+                        //new page with selected
+                        chosen = item.Cityname
                     }
                 }) ;
             }
