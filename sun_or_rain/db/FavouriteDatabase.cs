@@ -20,7 +20,6 @@ namespace sun_or_rain.db
 
         private void seed()
         {
-            if(database.)
             database.InsertAsync(new Favourite { Cityname = "Porto" });
             database.InsertAsync(new Favourite { Cityname = "Lisbon" });
             database.InsertAsync(new Favourite { Cityname = "Penafiel" });

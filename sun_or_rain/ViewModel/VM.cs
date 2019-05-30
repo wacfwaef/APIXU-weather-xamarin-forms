@@ -16,7 +16,7 @@ namespace sun_or_rain.ViewModel
     class VM : VM_base
     {
         ObservableCollection<Favourite> favourites;
-        Favourite item;
+        Favourite item = new Favourite();
 
         public VM()
         {
@@ -39,9 +39,10 @@ namespace sun_or_rain.ViewModel
 
         async void AddFavourite()
         {
-            if (Item != null)
+            if (Item.Cityname != null && Item.Cityname != "")
             {
-                if (Item.ID != null)
+                Search();
+                if (Item.ID != 0)
                 {
                     int p = FavouritesVar.IndexOf(Item);
                     FavouritesVar.Remove(Item);
@@ -50,7 +51,7 @@ namespace sun_or_rain.ViewModel
                 else
                     FavouritesVar.Add(Item);
                 await App.Database.SaveItemAsync(Item);
-                await Nav.PopAsync();
+                Item = new Favourite();
             }
         }
 
@@ -64,9 +65,17 @@ namespace sun_or_rain.ViewModel
             }
         }
 
-        async void Search()
+        void Search()
         {
-            Item = FavouritesVar.Last();
+            foreach(Favourite itemLoop in FavouritesVar) 
+            {
+                if (Item.Cityname == itemLoop.Cityname)
+                {
+                    Item = itemLoop;
+                    return;
+                }
+            }
+            Item.ID = 0;
         }
 
 

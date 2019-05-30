@@ -20,10 +20,6 @@ namespace sun_or_rain
     {
         public MainPage()
         {
-            ListView citieslist = new ListView
-            {
-
-            };
             BindingContext = new VM();
             InitializeComponent();
         }
