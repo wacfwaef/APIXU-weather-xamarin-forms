@@ -47,6 +47,7 @@
                                 <Label Text="{Binding Cityname}" 
                                 Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
                             </StackLayout>
+                            
                             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
                                 <Button Text="Remove" CommandParameter="{Binding .}"
                                         Command="{Binding Path=BindingContext.OnRemove, Source={x:Reference listView}}" />

@@ -25,8 +25,11 @@ namespace sun_or_rain.ViewModel
             OnItemAdded = new Command(AddFavourite);
             OnRemove = new Command((e) => {RemoveFavourite((e as Favourite));});
             OnNewCity = new Command(ViewNewCity);
+            
 
         }
+
+        
 
         public ICommand OnItemAdded { get; set; }  
         public ICommand OnRemove { get; set; }

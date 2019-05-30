@@ -15,10 +15,19 @@ namespace sun_or_rain.ViewModel
         {
             
             Controller.Controller a = new Controller.Controller();
-            a.GetWeather(chosen);
+            CurrentWeather = a.GetWeather(chosen);
             
         }
-        
+        private MainModel.APIXUCurrentWeather current;
+        public MainModel.APIXUCurrentWeather CurrentWeather
+        {
+            get { return current; }
+            set
+            {
+                current = value;
+                OnPropertyChanged();
+            }
+        }
         private MainModel weather_model;
 
         public MainModel WeatherMainModel

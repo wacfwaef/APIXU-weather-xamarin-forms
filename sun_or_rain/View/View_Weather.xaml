@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sun_or_rain.View.View_Weather"
-             Title="{Binding MainModel.Location.Name}">
+             Title="{Binding chosen}">
     
       <StackLayout>
         <StackLayout.Margin>
@@ -13,8 +13,8 @@
         </StackLayout.Margin>
         <StackLayout>
                 <StackLayout Padding="20,40,20,20">
-                <Entry Text="{Binding MainModel.Location.Name}"
-           Placeholder="{Binding MainModel.Location.Name}" IsReadOnly="True" />
+                <Entry Text="{Binding chosen}"
+           Placeholder="{Binding chosen}" IsReadOnly="True" />
 
 
                 <StackLayout Orientation="Horizontal">
