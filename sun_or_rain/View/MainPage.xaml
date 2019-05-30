@@ -41,15 +41,16 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout Orientation="Horizontal"
-                                 BackgroundColor="White"
-                                 HorizontalOptions="FillAndExpand">
-                            <Label Text="{Binding Cityname}" d:Text="{Binding .}"
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Cityname}" d:Text="{Binding .}"
                                 Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                            <Button Text="X" Command="{Binding OnRemove}" WidthRequest="30"></Button>
-                            
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                                <Button Text="Remove" Command="{Binding OnRemove}" WidthRequest="30"></Button>
+                            </StackLayout>
                         </StackLayout>
-                </ViewCell>
+                    </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
