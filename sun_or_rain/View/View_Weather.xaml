@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="sun_or_rain.View.View_Weather"
-             Title="{Binding chosen}">
-    
-      <StackLayout>
+             Title="{Binding CurrentWeather.Location.Name}">
+
+    <StackLayout>
         <StackLayout.Margin>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="0,40,0,0" />
@@ -12,79 +12,79 @@
             </OnPlatform>
         </StackLayout.Margin>
         <StackLayout>
-                <StackLayout Padding="20,40,20,20">
-                <Entry Text="{Binding chosen}"
-           Placeholder="{Binding chosen}" IsReadOnly="True" />
+            <StackLayout Padding="20,40,20,20">
+                <Entry Text="{Binding CurrentWeather.Location.Name}"
+           Placeholder="{Binding CurrentWeather.Location.Name}" IsReadOnly="True" />
 
 
                 <StackLayout Orientation="Horizontal">
-                        <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label Text="Country:"/>
-                        </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand">
-                            <Label Text="{Binding MainModel.Location.Country}"/>
-                        </StackLayout>
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Country:"/>
                     </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label Text="Temperature:"/>
-                        </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand">
-                            <Label Text="{Binding MainModel.Current.TempC}"/>
-                        </StackLayout>
+                    <StackLayout HorizontalOptions="EndAndExpand">
+                        <Label Text="{Binding CurrentWeather.Location.Country}"/>
                     </StackLayout>
+                </StackLayout>
 
-                    <StackLayout Orientation="Horizontal">
-                        <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label Text="Humidity:"/>
-                        </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand">
-                            <Label Text="{Binding MainModel.Current.Humidity}"/>
-                        </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Temperature:"/>
                     </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label Text="Precipitation:"/>
-                        </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand">
-                            <Label Text="{Binding MainModel.Current.PrecipMm}"/>
-                        </StackLayout>
+                    <StackLayout HorizontalOptions="EndAndExpand">
+                        <Label Text="{Binding CurrentWeather.Current.TempC}"/>
                     </StackLayout>
+                </StackLayout>
 
-                    <StackLayout Orientation="Horizontal">
-                        <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label Text="Weather Status:"/>
-                        </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand">
-                            <Label Text="{Binding MainModel.Condition.text}"/>
-                        </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Humidity:"/>
                     </StackLayout>
+                    <StackLayout HorizontalOptions="EndAndExpand">
+                        <Label Text="{Binding CurrentWeather.Current.Humidity}"/>
+                    </StackLayout>
+                </StackLayout>
 
-                    <StackLayout Orientation="Horizontal">
-                        <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label Text="Weather Icon:"/>
-                        </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand">
-                            <Image Source="{Binding MainModel.Condition.Icon}"
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Precipitation:"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="EndAndExpand">
+                        <Label Text="{Binding CurrentWeather.Current.PrecipMm}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Weather Status:"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="EndAndExpand">
+                        <Label Text="{Binding CurrentWeather.Current.Condition.Text}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Weather Icon:"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="EndAndExpand">
+                        <Image Source="http:{Binding CurrentWeather.Current.Condition.Icon}"
                    WidthRequest="30"
                    HeightRequest="30"/>
-                        </StackLayout>
                     </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <StackLayout HorizontalOptions="StartAndExpand">
-                            <Label Text="Wind Speed:"/>
-                        </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand">
-                            <Label Text="{Binding MainModel.Current.WindKph}"/>
-                        </StackLayout>
-                    </StackLayout>
-                    <Button Text="Go Back" Clicked="NavigateBack" Margin="60" />
                 </StackLayout>
-            </StackLayout>
 
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Text="Wind Speed:"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="EndAndExpand">
+                        <Label Text="{Binding CurrentWeather.Current.WindKph}"/>
+                    </StackLayout>
+                </StackLayout>
+                <Button Text="Go Back" Clicked="NavigateBack" Margin="60" />
+            </StackLayout>
         </StackLayout>
-  
+
+    </StackLayout>
+
 </ContentPage>

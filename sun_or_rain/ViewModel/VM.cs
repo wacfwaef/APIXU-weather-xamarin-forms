@@ -13,6 +13,7 @@ using System.Linq;
 using sun_or_rain.View;
 using sun_or_rain.Controller;
 
+
 namespace sun_or_rain.ViewModel
 {
     class VM : VM_base
@@ -96,12 +97,13 @@ namespace sun_or_rain.ViewModel
         }
         async void ViewNewCity()
         {
-
+            
             if (Item.Cityname != null)
             {
+                
                 await Nav.PushAsync(new NavigationPage(new View_Weather
                 {
-                    BindingContext = new VMdetails(item.Cityname)
+                    BindingContext = new VMdetails(Item.Cityname)
                     {
                     }
                 }));
