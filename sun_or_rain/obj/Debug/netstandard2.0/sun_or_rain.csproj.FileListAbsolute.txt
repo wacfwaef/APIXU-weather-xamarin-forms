@@ -30,3 +30,7 @@ C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain\obj\Debug\netstandard2.0\Xam
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain\obj\Debug\netstandard2.0\sun_or_rain.dll
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain\obj\Debug\netstandard2.0\ref\sun_or_rain.dll
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain\obj\Debug\netstandard2.0\sun_or_rain.pdb
+C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain\bin\Debug\netstandard2.0\Mono.Android.xml
+C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain\obj\Debug\netstandard2.0\sun_or_rain.csproj.CopyComplete

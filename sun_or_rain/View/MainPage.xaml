@@ -57,10 +57,6 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
-            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="Save" Command="{Binding onSave}"></Button>
-            </StackLayout>
-        </StackLayout>
+        
     </StackLayout>
 </ContentPage>
