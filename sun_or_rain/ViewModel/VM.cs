@@ -9,61 +9,96 @@ using sun_or_rain.Apixu;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System.Windows.Input;
+using System.Linq;
 
 namespace sun_or_rain.ViewModel
 {
     class VM : INotifyPropertyChanged
     {
+        ObservableCollection<Favourite> FavouritesVar;
+        Favourite item;
+
         public VM()
         {
-            
-            //todo database read cities here
-            FavouriteC = new ObservableCollection<Favourite>
-            {
-                new Favourite{Cityname = "Penafiel"},
-                new Favourite{Cityname = "Porto"}
-            };
-            
-            onItemAdded = new Command(AddFavourites);
-            onRemove = new Command(RemoveCity);
-        //SaveOp = new Command(SaveItem);
-        //DeleteOp = new Command(DeleteItem);
-    }
-        
+            onItemAdded = new Command(AddFavourite);
+            onRemove = new Command(RemoveFavourite);
+            onNewCity = new Command(Search);
+        }
+
         public ICommand onItemAdded { get; set; }  
         public ICommand onRemove { get; set; }
+        public ICommand onNewCity { get; set; }
+        public INavigation Nav { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        
-        public void AddFavourites()
+        public Favourite Item
         {
-            //add input data to the database
+            set { SetProperty(ref item, value); }
+            get { return item; }
         }
 
-        public void RemoveCity()
+        async void AddFavourite()
         {
-            //remove selected item from the database
-        }
-        public ObservableCollection<Favourite> FavouriteC { get; set; }
-        public Command<Favourite> RemoveCommand
-        {
-            get
+            if (Item != null)
             {
-                return new Command<Favourite>((cityname) =>
-            {
-                FavouriteC.Remove(cityname);
-            });
-                // for entry binding and for method parameter value
+                if (Item.ID != null)
+                {
+                    int p = FavouritesVar.IndexOf(Item);
+                    FavouritesVar.Remove(Item);
+                    FavouritesVar.Insert(p, Item);
+                }
+                else
+                    FavouritesVar.Add(Item);
+                await MainPage.Database.SaveItemAsync(Item);
+                await Nav.PopAsync();
             }
         }
 
-        
+        async void RemoveFavourite()
+        {
+            if (Item != null)
+            {
+                FavouritesVar.Remove(Item);
+                await MainPage.Database.DeleteItemAsync(Item);
+                await Nav.PopAsync();
+            }
+        }
+
+        async void Search()
+        {
+            Item = FavouritesVar.Last();
+        }
 
 
-        
+        public ObservableCollection<Favourite> Favourites
+        {
+            set { SetProperty(ref FavouritesVar, value); }
+            get
+            {
+                if (FavouritesVar == null)
+                    Initialize();
+                return FavouritesVar;
+            }
+        }
+
+        private async void Initialize()
+        {
+            List<Favourite> list = await MainPage.Database.GetItemsAsync();
+            Favourites = new ObservableCollection<Favourite>(list);
+        }
+
+        protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (Object.Equals(storage, value))
+                return false;
+
+            storage = value;
+            OnPropertyChanged(propertyName);
+            return true;
+        }
     }
 }
     

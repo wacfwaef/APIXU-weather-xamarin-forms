@@ -8,7 +8,7 @@
              x:Class="sun_or_rain.MainPage"
              Title="My favourite weather app!">
     <StackLayout>
-        <Entry Text="Insert a city here" />
+        <Entry Placeholder="Insert a city here" Text=""/>
         <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
                 <Button Text="View weather" Command="{Binding onNewCity}"></Button>
@@ -20,23 +20,25 @@
         
 
         <ListView 
-                  HasUnevenRows="True"
+              HasUnevenRows="True"
               BackgroundColor="#ffffff"
               VerticalOptions="FillAndExpand"
               HorizontalOptions="FillAndExpand"
-                  ItemSelected="onItemSelected">
+              ItemSelected="onItemSelected"
+              ItemsSource="{Binding Favourites}"
+              Margin="20" 
+              x:Name="listView" >
+            
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal"
                                  BackgroundColor="White"
                                  HorizontalOptions="FillAndExpand">
-                        <Label Text="{Binding favouritecities}" 
-                       d:Text="{Binding .}"
-                       Style="{DynamicResource ListItemTextStyle}" />
-                            <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                                <Button Text="Remove from favourites" Command="{Binding onRemove}"></Button>
-                            </StackLayout>
+                            <Label Text="{Binding Cityname}" d:Text="{Binding .}"
+                                Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                            <Button Text="X" Command="{Binding onRemove}" WidthRequest="30"></Button>
+                            
                         </StackLayout>
                 </ViewCell>
             </DataTemplate>
