@@ -11,7 +11,7 @@ using RestSharp;
 using static sun_or_rain.Model.MainModel;
 
 
-namespace sun_or_rain.Apixu
+namespace sun_or_rain.db
 {
     class Apixu<t>
     {

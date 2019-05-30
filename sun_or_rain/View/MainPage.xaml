@@ -17,7 +17,7 @@
                 <On Platform="Android, UWP" Value="0,0,0,0" />
             </OnPlatform>
         </StackLayout.Margin>
-        <Entry Placeholder="Insert a city here" Text=""/>
+        <Entry Placeholder="Insert a city here" Text="{Binding Favourite.Cityname}"/>
         <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
                 <Button Text="View weather" Command="{Binding OnNewCity}"></Button>
@@ -48,7 +48,7 @@
                                 Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
                             </StackLayout>
                             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                                <Button Text="Remove" Command="{Binding OnRemove}" WidthRequest="30"></Button>
+                                <Button Text="Remove" Command="{Binding OnRemove}" WidthRequest="10"></Button>
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

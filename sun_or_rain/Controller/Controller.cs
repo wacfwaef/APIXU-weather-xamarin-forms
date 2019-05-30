@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using sun_or_rain.Model;
-using sun_or_rain.Apixu;
+using sun_or_rain.db;
 using System.Threading.Tasks;
 
 namespace sun_or_rain.Controller

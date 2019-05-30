@@ -9,7 +9,7 @@ using sun_or_rain.Model;
 using System.Data.SQLite;
 using sun_or_rain.ViewModel;
 using sun_or_rain.View;
-using sun_or_rain.Apixu;
+using sun_or_rain.db;
 
 namespace sun_or_rain
 {
@@ -18,7 +18,6 @@ namespace sun_or_rain
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        public static FavouritesDatabase database;
         public MainPage()
         {
             ListView citieslist = new ListView
@@ -29,17 +28,7 @@ namespace sun_or_rain
             InitializeComponent();
         }
 
-        public static FavouritesDatabase Database
-        {
-            get
-            {
-                if (database == null)
-                {
-                    database = new FavouritesDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("FavouritesSQLite.db3"));
-                }
-                return database;
-            }
-        }
+        
 
         protected override void OnAppearing()
         {

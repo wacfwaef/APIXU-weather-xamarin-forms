@@ -14,11 +14,8 @@
           "lib/monoandroid/_._": {}
         }
       },
-      "Microsoft.Bcl.Build/1.0.21": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Bcl.Build.targets": {}
-        }
+      "Microsoft.Bcl.Build/1.0.14": {
+        "type": "package"
       },
       "Microsoft.Net.Http/2.2.29": {
         "type": "package",
@@ -991,7 +988,6 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.Bcl": "1.1.10",
-          "Microsoft.Bcl.Build": "1.0.21",
           "Microsoft.Net.Http": "2.2.29",
           "Newtonsoft.Json": "12.0.2",
           "RestSharp": "106.6.9",
@@ -1102,18 +1098,26 @@
         "microsoft.bcl.nuspec"
       ]
     },
-    "Microsoft.Bcl.Build/1.0.21": {
-      "sha512": "sgHu4mIt0+NVGyI12Bj4hLPypNK55UOH+ologj2LqDCjxq3EbIxe/uAtHjY+fEwbE1dtsAHG8SXHf+V/EYbKTg==",
+    "Microsoft.Bcl.Build/1.0.14": {
+      "sha512": "cDLKSvNvRa519hplsbSoYqO69TjdDIhfjtKUM0g20/nVROoWsGav9KCI9HtnGjLmdV1+TcUUDhbotcllibjPEA==",
       "type": "package",
-      "path": "microsoft.bcl.build/1.0.21",
+      "path": "microsoft.bcl.build/1.0.14",
+      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "License-Stable.rtf",
-        "build/Microsoft.Bcl.Build.Tasks.dll",
-        "build/Microsoft.Bcl.Build.targets",
-        "microsoft.bcl.build.1.0.21.nupkg.sha512",
-        "microsoft.bcl.build.nuspec"
+        "content/net40/_._",
+        "content/netcore45/_._",
+        "content/portable-net40+win8+sl4+wp71+wpa81/_._",
+        "content/sl4-windowsphone71/_._",
+        "content/sl4/_._",
+        "microsoft.bcl.build.1.0.14.nupkg.sha512",
+        "microsoft.bcl.build.nuspec",
+        "tools/Install.ps1",
+        "tools/Microsoft.Bcl.Build.Tasks.dll",
+        "tools/Microsoft.Bcl.Build.targets",
+        "tools/Uninstall.ps1"
       ]
     },
     "Microsoft.Net.Http/2.2.29": {
@@ -2531,7 +2535,6 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
       "Microsoft.Bcl >= 1.1.10",
-      "Microsoft.Bcl.Build >= 1.0.21",
       "Microsoft.Net.Http >= 2.2.29",
       "Newtonsoft.Json >= 12.0.2",
       "RestSharp >= 106.6.9",
@@ -2594,10 +2597,6 @@
           "Microsoft.Bcl": {
             "target": "Package",
             "version": "[1.1.10, )"
-          },
-          "Microsoft.Bcl.Build": {
-            "target": "Package",
-            "version": "[1.0.21, )"
           },
           "Microsoft.Net.Http": {
             "target": "Package",

@@ -600,7 +600,6 @@ C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\bin\Debug\sun_or_rai
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\bin\Debug\Xamarin.Essentials.dll.mdb
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\bin\Debug\sun_or_rain.dll
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\bin\Debug\sun_or_rain.pdb
-C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\bin\Debug\sun_or_rain.dll.config
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\build.props
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\adb.props
@@ -772,7 +771,6 @@ C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\android
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\android\assets\sun_or_rain.Android.dll
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\android\assets\sun_or_rain.Android.pdb
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\android\assets\sun_or_rain.dll
-C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\android\assets\sun_or_rain.dll.config
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\android\assets\sun_or_rain.dll.mdb
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\android\assets\System.Collections.dll
 C:\Users\wrt\Documents\cmov\xamaringarb\sun_or_rain.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.dll

@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using sun_or_rain.Model;
-using sun_or_rain.Apixu;
+using sun_or_rain.db;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System.Windows.Input;
@@ -15,7 +15,7 @@ namespace sun_or_rain.ViewModel
 {
     class VM : INotifyPropertyChanged
     {
-        ObservableCollection<Favourite> FavouritesVar;
+        ObservableCollection<Favourite> favourites;
         Favourite item;
 
         public VM()
@@ -52,7 +52,7 @@ namespace sun_or_rain.ViewModel
                 }
                 else
                     FavouritesVar.Add(Item);
-                await MainPage.Database.SaveItemAsync(Item);
+                await App.Database.SaveItemAsync(Item);
                 await Nav.PopAsync();
             }
         }
@@ -62,7 +62,7 @@ namespace sun_or_rain.ViewModel
             if (Item != null)
             {
                 FavouritesVar.Remove(Item);
-                await MainPage.Database.DeleteItemAsync(Item);
+                await App.Database.DeleteItemAsync(Item);
                 await Nav.PopAsync();
             }
         }
@@ -73,20 +73,20 @@ namespace sun_or_rain.ViewModel
         }
 
 
-        public ObservableCollection<Favourite> Favourites
+        public ObservableCollection<Favourite> FavouritesVar
         {
-            set { SetProperty(ref FavouritesVar, value); }
+            set { SetProperty(ref favourites, value); }
             get
             {
-                if (FavouritesVar == null)
+                if (favourites == null)
                     Initialize();
-                return FavouritesVar;
+                return favourites;
             }
         }
 
         private async void Initialize()
         {
-            List<Favourite> list = await MainPage.Database.GetItemsAsync();
+            List<Favourite> list = await App.Database.GetItemsAsync();
             FavouritesVar = new ObservableCollection<Favourite>(list);
         }
 

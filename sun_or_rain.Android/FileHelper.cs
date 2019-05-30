@@ -2,7 +2,7 @@
 using System.IO;
 using Xamarin.Forms;
 using sun_or_rain.iOS;
-using sun_or_rain.Apixu;
+using sun_or_rain.db;
 
 [assembly: Dependency(typeof(FileHelper))]
 namespace sun_or_rain.iOS
