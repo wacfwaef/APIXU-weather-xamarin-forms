@@ -36,14 +36,15 @@
               ItemSelected="onItemSelected"
               ItemsSource="{Binding FavouritesVar}"
               Margin="20" 
-              x:Name="listView" >
+              x:Name="listView" 
+            VerticalScrollBarVisibility="Always">
             
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                         <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
                             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                                <Label Text="{Binding Cityname}" d:Text="{Binding .}"
+                                <Label Text="{Binding Cityname}" 
                                 Style="{DynamicResource ListItemTextStyle}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
                             </StackLayout>
                             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
