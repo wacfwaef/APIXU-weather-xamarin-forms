@@ -9,20 +9,16 @@ using sun_or_rain.Controller;
 
 namespace sun_or_rain.ViewModel
 {
-    class VMdetails
+    class VMdetails :VM_base
     {
-        public string chosen { get; set; }
+        public string Chosen { get; set; }
         public VMdetails()
         {
 
             Controller.Controller a = new Controller.Controller();
-            a.GetWeather(chosen);
+            a.GetWeather(Chosen);
         }
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
         private MainModel weather_model;
 
         public MainModel WeatherMainModel

@@ -13,7 +13,7 @@ using System.Linq;
 
 namespace sun_or_rain.ViewModel
 {
-    class VM : INotifyPropertyChanged
+    class VM : VM_base
     {
         ObservableCollection<Favourite> favourites;
         Favourite item;
@@ -29,11 +29,8 @@ namespace sun_or_rain.ViewModel
         public ICommand OnRemove { get; set; }
         public ICommand OnNewCity { get; set; }
         public INavigation Nav { get; set; }
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
+        
         public Favourite Item
         {
             set { SetProperty(ref item, value); }
@@ -88,16 +85,6 @@ namespace sun_or_rain.ViewModel
         {
             List<Favourite> list = await App.Database.GetItemsAsync();
             FavouritesVar = new ObservableCollection<Favourite>(list);
-        }
-
-        protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
-        {
-            if (Object.Equals(storage, value))
-                return false;
-
-            storage = value;
-            OnPropertyChanged(propertyName);
-            return true;
         }
     }
 }

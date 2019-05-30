@@ -53,7 +53,7 @@ namespace sun_or_rain
                     BindingContext = new VMdetails
                     {
                         //new page with selected
-                        chosen = entry.Text
+                        Chosen = entry.Text
                     }
                 }) ;
             }
@@ -64,14 +64,14 @@ namespace sun_or_rain
             if (e.SelectedItem != null)
             {
                 var item = ((Favourite)e.SelectedItem).Copy();
-                await Navigation.PushAsync(new View_Weather
+                await Navigation.PushAsync(new NavigationPage(new View_Weather
                 {
                     BindingContext = new VMdetails
                     {
                         //new page with selected
-                        chosen = item.Cityname
+                        Chosen = item.Cityname
                     }
-                }) ;
+                })) ;
             }
         }
     }
