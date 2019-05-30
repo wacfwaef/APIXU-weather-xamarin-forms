@@ -62,16 +62,7 @@
                     </StackLayout>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal">
-                    <StackLayout HorizontalOptions="StartAndExpand">
-                        <Label Text="Weather Icon:"/>
-                    </StackLayout>
-                    <StackLayout HorizontalOptions="EndAndExpand">
-                        <Image Source="http:{Binding CurrentWeather.Current.Condition.Icon}"
-                   WidthRequest="30"
-                   HeightRequest="30"/>
-                    </StackLayout>
-                </StackLayout>
+                
 
                 <StackLayout Orientation="Horizontal">
                     <StackLayout HorizontalOptions="StartAndExpand">
