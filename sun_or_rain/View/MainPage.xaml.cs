@@ -52,6 +52,19 @@ namespace sun_or_rain
             }
         }
 
-        
+        async void onInputSelected(object sender, EventArgs e)
+        {
+            if (input.Text != null)
+            {
+                
+                await Navigation.PushAsync(new NavigationPage(new View_Weather
+                {
+                    BindingContext = new VMdetails(input.Text)
+                    {
+                        //new page with selected
+                    }
+                }));
+            }
+        }
     }
 }

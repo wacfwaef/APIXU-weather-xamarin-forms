@@ -17,10 +17,10 @@
                 <On Platform="Android, UWP" Value="0,0,0,0" />
             </OnPlatform>
         </StackLayout.Margin>
-        <Entry Placeholder="Insert a city here" Text="{Binding Item.Cityname}"/>
+        <Entry x:Name="input" Placeholder="Insert a city here" Text="{Binding Item.Cityname}"/>
         <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
-                <Button Text="View weather" Command="{Binding OnNewCity}"></Button>
+                <Button Text="View weather" Clicked="onInputSelected"></Button>
             </StackLayout>
             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
                 <Button Text="Add to favourites" Command="{Binding OnItemAdded}"></Button>

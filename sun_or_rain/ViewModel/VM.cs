@@ -25,7 +25,6 @@ namespace sun_or_rain.ViewModel
         {
             OnItemAdded = new Command(AddFavourite);
             OnRemove = new Command((e) => {RemoveFavourite((e as Favourite));});
-            OnNewCity = new Command(ViewNewCity);
             
 
         }
@@ -34,7 +33,6 @@ namespace sun_or_rain.ViewModel
 
         public ICommand OnItemAdded { get; set; }  
         public ICommand OnRemove { get; set; }
-        public ICommand OnNewCity { get; set; }
         public INavigation Nav { get; set; }
         
         
@@ -94,21 +92,6 @@ namespace sun_or_rain.ViewModel
                     Initialize();
                 return favourites;
             }
-        }
-        async void ViewNewCity()
-        {
-            
-            if (Item.Cityname != null)
-            {
-                
-                await Nav.PushAsync(new NavigationPage(new View_Weather
-                {
-                    BindingContext = new VMdetails(Item.Cityname)
-                    {
-                    }
-                }));
-            }
-
         }
         private async void Initialize()
         {
